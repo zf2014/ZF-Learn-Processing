@@ -1,0 +1,53 @@
+
+
+$func-1 = @(a=1, b=2)
+	return a + b
+
+
+#my1
+	p($func-1)
+	content 'helloworld'
+	s1 $func-1()
+	s2 $func-1(3 8)
+	s3 $func-1(3,8)
+	s4 $func-1(a:2,b:3)
+
+
+
+$func-2 = @(val...)
+	return val
+
+
+#my2
+	s1 $func-2(1px 2px 3px 4px)
+	s2 $func-2(1px 2px 3px 4px)
+	s3 $func-2(1px 2px 3px, 4px)[1]
+	s4 $func-2(1px 2px 3px, 4px)
+	
+
+
+$func-3 = @()
+	return arguments
+
+
+#my3
+	s1 $func-3(1px 2px 3px 4px)[0]
+	s2 $func-3(1px 2px 3px 4px, 1px 2px 3px 4px)[0]
+	s3 $func-3(1px, 2px, 3px, 4px)[0]
+	s4 join(',', $func-3(1px 2px 3px 4px))
+
+
+#my4
+	s1 15px/3
+	s2 15px\/3
+	s3 (15px\/3)
+	s3 (15px/3)
+
+
+$cssRulesName = a b c
+
+#my5
+	for n, i in $cssRulesName
+		/.my-{n}
+			z-index i
+	

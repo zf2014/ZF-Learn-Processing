@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>高度自适应</title>
+		<script type="text/javascript">
+			var url = window.location.href,
+					search = window.location.search,
+					query = search.substring(1),
+					// top = window.top,
+					topDoc = window.top.document
+			;
+			function parse(){
+				var querys = query.split('&'),
+						len = querys.length,
+						reslut = {},
+						param,
+						kv
+				;
+				while(len){
+					param = querys[--len];
+					kv = param.split('=');
+					reslut[kv[0]] = kv[1];
+				}
+				return reslut;
+			}
+			function height(){
+				var params = parse(),
+					 	target = topDoc.getElementById(params['ah-target'])
+			 	;
+				target.style.height = params['ah-height'] + 'px';
+			}
+			height();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

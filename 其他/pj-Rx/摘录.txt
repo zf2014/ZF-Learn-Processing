@@ -1,0 +1,2 @@
+1.Reactive Programming raises the level of abstraction of your code so you can focus on the interdependence of events that define the business logic, rather than having to constantly fiddle with a large amount of implementation details.
+[翻译] > 1.反应性编程提高代码的抽象层次,这样你就可以专注于相互依存的事件定义的业务逻辑,而不必经常摆弄大量的实现细节。

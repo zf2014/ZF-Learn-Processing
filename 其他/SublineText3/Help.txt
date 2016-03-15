@@ -1,0 +1,1 @@
+1.sublime.log_commands(True)  :  可以显示每个操作的命令, 该命令可以用于快捷方式
